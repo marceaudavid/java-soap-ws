@@ -1,0 +1,370 @@
+{
+  "info": {
+    "_postman_id": "a916ced5-e210-400f-a3f1-c38f314ec69b",
+    "name": "SOAP",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "getAuthors",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "text/xml",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \n                  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" \n                  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <soapenv:Body>\n    <ns0:getAuthors\n      xmlns:ns0=\"http://webservice/\" \n      soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n    </ns0:getAuthors>\n  </soapenv:Body>\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9999/ws/author",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9999",
+          "path": [
+            "ws",
+            "author"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getAuthorById",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "text/xml",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \n                  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" \n                  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <soapenv:Body>\n    <ns0:getAuthorById \n      xmlns:ns0=\"http://webservice/\" \n      soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n      <arg0 xsi:type=\"xsd:int\">1</arg0> \n    </ns0:getAuthorById>\n  </soapenv:Body>\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9999/ws/author",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9999",
+          "path": [
+            "ws",
+            "author"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createAuthor",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "text/xml"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \n                  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" \n                  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <soapenv:Body>\n    <ns0:createAuthor \n      xmlns:ns0=\"http://webservice/\" \n      soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n    \t<arg0 xsi:type=\"xsd:string\">Victor</arg0> \n    \t<arg1 xsi:type=\"xsd:string\">Hugo</arg1> \n    </ns0:createAuthor>\n  </soapenv:Body>\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9999/ws/author",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9999",
+          "path": [
+            "ws",
+            "author"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateAuthor",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "text/xml"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \n                  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" \n                  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <soapenv:Body>\n    <ns0:updateAuthor \n      xmlns:ns0=\"http://webservice/\" \n      soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n    \t<arg0 xsi:type=\"xsd:int\">3</arg0>\n    \t<arg1 xsi:type=\"xsd:string\">Jean-Baptiste</arg1>\n    \t<arg2 xsi:type=\"xsd:string\">Molière</arg2>\n    </ns0:updateAuthor>\n  </soapenv:Body>\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9999/ws/author",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9999",
+          "path": [
+            "ws",
+            "author"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteAuthor",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "text/xml"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \n                  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" \n                  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <soapenv:Body>\n    <ns0:deleteAuthor \n      xmlns:ns0=\"http://webservice/\" \n      soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n    \t<arg0 xsi:type=\"xsd:int\">3</arg0>\n    </ns0:deleteAuthor>\n  </soapenv:Body>\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9999/ws/author",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9999",
+          "path": [
+            "ws",
+            "author"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getBooks",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "text/xml"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \n                  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" \n                  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n    <soapenv:Body>\n        <ns0:getBooks\n      xmlns:ns0=\"http://webservice/\" \n      soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n    </ns0:getBooks>\n    </soapenv:Body>\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9999/ws/book",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9999",
+          "path": [
+            "ws",
+            "book"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getBookById",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "text/xml"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \n                  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" \n                  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <soapenv:Body>\n    <ns0:getBookById \n      xmlns:ns0=\"http://webservice/\" \n      soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n      <arg0 xsi:type=\"xsd:string\">978-0-575-08244-1</arg0> \n    </ns0:getBookById>\n  </soapenv:Body>\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9999/ws/book",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9999",
+          "path": [
+            "ws",
+            "book"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createBook",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "text/xml"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \n                  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" \n                  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <soapenv:Body>\n    <ns0:createBook \n      xmlns:ns0=\"http://webservice/\" \n      soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n    \t<arg0 xsi:type=\"xsd:string\">978-0-00-721971-1</arg0> \n    \t<arg1 xsi:type=\"xsd:string\">Sword Song</arg1>\n    \t<arg2 xsi:type=\"xsd:int\">2</arg2> \n    </ns0:createBook>\n  </soapenv:Body>\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9999/ws/book",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9999",
+          "path": [
+            "ws",
+            "book"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateBook",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "text/xml"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \n                  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" \n                  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <soapenv:Body>\n    <ns0:updateBook \n      xmlns:ns0=\"http://webservice/\" \n      soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n    \t<arg0 xsi:type=\"xsd:string\">978-0-00-721971-1</arg0> \n    \t<arg1 xsi:type=\"xsd:string\">Some Book</arg1>\n    \t<arg2 xsi:type=\"xsd:int\">2</arg2>\n    </ns0:updateBook>\n  </soapenv:Body>\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9999/ws/book",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9999",
+          "path": [
+            "ws",
+            "book"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteBook",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "text/xml"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \n                  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" \n                  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <soapenv:Body>\n    <ns0:deleteBook\n      xmlns:ns0=\"http://webservice/\" \n      soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n    \t<arg0 xsi:type=\"xsd:string\">978-0-00-721971-1</arg0>\n    </ns0:deleteBook>\n  </soapenv:Body>\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9999/ws/book",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9999",
+          "path": [
+            "ws",
+            "book"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
